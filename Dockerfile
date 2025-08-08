@@ -85,7 +85,7 @@ COPY genie-client/main.py genie-client/server.py genie-client/start.sh ./
 RUN chmod +x start.sh && \
     uv venv .venv && \
     . .venv/bin/activate && \
-    #export UV_DEFAULT_INDEX="https://pypi.tuna.tsinghua.edu.cn/simple" && \
+    export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple" && \
     uv sync
 
 # 复制 genie-tool
@@ -98,7 +98,7 @@ COPY genie-tool/server.py genie-tool/start.sh genie-tool/.env_template ./
 RUN chmod +x start.sh && \
     uv venv .venv && \
     . .venv/bin/activate && \
-    #export UV_DEFAULT_INDEX="https://pypi.tuna.tsinghua.edu.cn/simple" && \
+    export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple" && \
     uv sync && \
     mkdir -p /data/genie-tool && \
     cp .env_template .env && \
