@@ -8,7 +8,7 @@ export default defineConfig(({ command, mode }) => {
   return {
     preview: {
       allowedHosts: [
-        'llm-joyagent-13gj6i-ca4140-46-38-236-213.traefik.me'
+        '.traefik.me'
       ]
     },
     plugins: [
