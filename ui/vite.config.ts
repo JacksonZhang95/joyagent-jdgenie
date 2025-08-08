@@ -6,9 +6,10 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   return {
+    // 其他配置 ...
     preview: {
       allowedHosts: [
-        '.traefik.me'
+        'llm-joyagent-13ggj6i-ca4140-46-38-236-213.traefik.me'
       ]
     },
     plugins: [
